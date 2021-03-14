@@ -1,3 +1,4 @@
+USE codersTrustProjectDatabase;
 --
 -- Dumping data for table `customer`
 --
@@ -15,7 +16,7 @@ INSERT INTO `customer` (`ID`, `username`, `name`, `surname`, `IDgender`, `email`
 
 INSERT INTO `quizMaster` (`ID`, `DateTime`, `customerID`) VALUES
 (1, '2021-03-12 18:19:52', NULL),
-(2, '2021-03-13 09:15:08', 3;
+(2, '2021-03-13 09:15:08', 3);
 
 -- ---------------------------------------------------------
 --
@@ -50,3 +51,13 @@ INSERT INTO `quizDetail` (`ID`, `IDquiz`, `IDquestionsLib`, `score`) VALUES
 (24, 2, 12, 5);
 
 -- --------------------------------------------------------
+
+--
+-- Dumping data for table `activeCourse`
+--
+
+INSERT INTO `activeCourse` (`ID`, `IDcustomer`, `IDcourseLibrary`, `beginTime`, `endTime`, `isActive`, `progress`) VALUES
+(1, 1, 14, '2021-03-13 17:31:28', NULL, 1, 20);
+
+-- --------------------------------------------------------
+

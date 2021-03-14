@@ -1,12 +1,4 @@
-USING "name";
---
--- Dumping data for table `activeCourse`
---
-
-INSERT INTO `activeCourse` (`ID`, `IDcustomer`, `IDcourseLibrary`, `beginTime`, `endTime`, `isActive`, `progress`) VALUES
-(1, 1, 14, '2021-03-13 17:31:28', NULL, 1, 20);
-
--- --------------------------------------------------------
+USE codersTrustProjectDatabase;
 --
 -- Dumping data for table `country`
 --
@@ -268,6 +260,38 @@ INSERT INTO `country` (`ID`, `countryName`, `countryAcronym`, `phonePrefix`) VAL
 -- --------------------------------------------------------
 
 --
+-- Dumping data for table `knowledgeLibrary`
+--
+
+INSERT INTO `knowledgeLibrary` (`ID`, `Category`, `isActive`, `description`) VALUES
+(1, 'Creative', 1, 'Graphical Design'),
+(2, 'Development', 1, 'Programming'),
+(3, 'Digital Marketing', 1, 'Social Media');
+
+-- --------------------------------------------------------
+
+--
+-- Dumping data for table `questionsLibrary`
+--
+
+INSERT INTO `questionsLibrary` (`ID`, `IDknowledgeLibrary`, `question`, `secondaryQuestion`, `score`, `typeOfAnswer`, `isActive`) VALUES
+(1, 1, 'Do you enjoy making visual presentations for school or business?', 'Do you feel at home with Powerpoint or Keynote?', 5, 1, 1),
+(2, 2, 'Have you tried building a website with a CMS like wordpress or Wix?', 'Do you feel the options are limited and would more flexibility', 5, 1, 1),
+(3, 2, 'Do you find numbers and logic is preferred over philosophical questions?', 'Did you like Math in school?', 5, 1, 1),
+(4, 2, 'Do you like to take online intelligence tests?', 'Are you interested in developing your analytical skills?', 5, 1, 1),
+(5, 3, 'Do you find that Social Media influences your buying decisions?', 'Have you bought something via Instagram or Facebook pages?', 5, 1, 1),
+(6, 3, 'Are you very active on Social Media?', 'Do you have more than 2 SoMe platforms that you actively use?', 5, 1, 1),
+(7, 1, 'Do you have a favourite artist when it comes to visual art?', 'Could be a painter, performance artist etc.?', 5, 1, 1),
+(8, 1, 'Have you tried editing video on your mobile device or PC?', 'Maybe editing an insta story or a video editing?', 5, 1, 1),
+(9, 3, 'Do you care about who likes and comments on your posts?', 'Do you create stories on Instagram and track their performance?', 5, 1, 1),
+(10, 1, 'Do you appreciate design in relation to products?', 'Does a shoe have to be functional or good looking?', 5, 1, 1),
+(11, 2, 'Are you interested in coding and learning to either understand or code yourself?', 'Have you tried learning code at some point?', 5, 1, 1),
+(12, 3, 'Do you believe that Social Media is more effective than traditional marketing?', 'Are there SoMe influencers you would trust in recommending products to you?', 5, 1, 1);
+
+-- --------------------------------------------------------
+
+
+--
 -- Dumping data for table `courseLibrary`
 --
 
@@ -301,35 +325,5 @@ INSERT INTO `gender` (`ID`, `gender`) VALUES
 (1, 'choose one'),
 (2, 'Male'),
 (3, 'Female'); 
-
--- --------------------------------------------------------
---
--- Dumping data for table `knowledgeLibrary`
---
-
-INSERT INTO `knowledgeLibrary` (`ID`, `Category`, `isActive`, `description`) VALUES
-(1, 'Creative', 1, 'Graphical Design'),
-(2, 'Development', 1, 'Programming'),
-(3, 'Digital Marketing', 1, 'Social Media');
-
--- --------------------------------------------------------
-
---
--- Dumping data for table `questionsLibrary`
---
-
-INSERT INTO `questionsLibrary` (`ID`, `IDknowledgeLibrary`, `question`, `secondaryQuestion`, `score`, `typeOfAnswer`, `isActive`) VALUES
-(1, 1, 'Do you enjoy making visual presentations for school or business?', 'Do you feel at home with Powerpoint or Keynote?', 5, 1, 1),
-(2, 2, 'Have you tried building a website with a CMS like wordpress or Wix?', 'Do you feel the options are limited and would more flexibility', 5, 1, 1),
-(3, 2, 'Do you find numbers and logic is preferred over philosophical questions?', 'Did you like Math in school?', 5, 1, 1),
-(4, 2, 'Do you like to take online intelligence tests?', 'Are you interested in developing your analytical skills?', 5, 1, 1),
-(5, 3, 'Do you find that Social Media influences your buying decisions?', 'Have you bought something via Instagram or Facebook pages?', 5, 1, 1),
-(6, 3, 'Are you very active on Social Media?', 'Do you have more than 2 SoMe platforms that you actively use?', 5, 1, 1),
-(7, 1, 'Do you have a favourite artist when it comes to visual art?', 'Could be a painter, performance artist etc.?', 5, 1, 1),
-(8, 1, 'Have you tried editing video on your mobile device or PC?', 'Maybe editing an insta story or a video editing?', 5, 1, 1),
-(9, 3, 'Do you care about who likes and comments on your posts?', 'Do you create stories on Instagram and track their performance?', 5, 1, 1),
-(10, 1, 'Do you appreciate design in relation to products?', 'Does a shoe have to be functional or good looking?', 5, 1, 1),
-(11, 2, 'Are you interested in coding and learning to either understand or code yourself?', 'Have you tried learning code at some point?', 5, 1, 1),
-(12, 3, 'Do you believe that Social Media is more effective than traditional marketing?', 'Are there SoMe influencers you would trust in recommending products to you?', 5, 1, 1);
 
 -- --------------------------------------------------------
